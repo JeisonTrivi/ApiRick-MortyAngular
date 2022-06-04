@@ -1,0 +1,18 @@
+
+<div class="container">
+    <h1 class="text-center">Rick Y Morty</h1>
+    <div class="input-group mb-3">
+        <span class="input-group-text input" id="basic-addon1"><span class="material-symbols-outlined">
+            search
+            </span></span>
+            <input type="text" class="container form-control input" placeholder="Busca tu personaje" (input)="filter($event)">
+    </div>
+    
+    <hr>
+
+    <div class="row ">
+        <div *ngFor ='let personaje of personajes' class="col-xl-4 col-sm-6 col-xs-12">
+            <app-card [personaje]="personaje"></app-card>
+        </div>
+    </div>
+</div>
